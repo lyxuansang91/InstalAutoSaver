@@ -1,0 +1,125 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gesture-image="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ToolbarPopupTheme"
+            app:theme="@style/AppTheme.Toolbar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="Setting     "
+                android:textAppearance="@style/TextAppearance.FontTitle" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_appbar"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/setting_box_bg"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <android.support.v7.widget.SwitchCompat
+                android:id="@+id/switchAutoDownload"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:button="@null"
+                android:paddingBottom="20dp"
+                android:paddingTop="20dp"
+                android:text="Auto asking download notification"
+                android:textColor="@color/setting_text_color"
+                android:textOn=""
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/setting_box_bg"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Save folder:"
+                android:textColor="@color/setting_text_color"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/txtAppFolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:singleLine="true"
+                android:text="/sdcard/InstagAutoSave"
+                android:textColor="@color/setting_text_color2"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/btnOpenAppFolder"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_bg_setting"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="0dp"
+                android:singleLine="true"
+                android:text="Open folder"
+                android:textColor="@android:color/white"
+                android:textSize="14sp" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_banner_unit_id"></com.google.android.gms.ads.AdView>
+</RelativeLayout>

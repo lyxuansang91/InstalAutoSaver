@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#eeeeee"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:visibility="gone"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_banner_unit_id"></com.google.android.gms.ads.AdView>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/input_layout_url"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/adView"
+                android:layout_marginTop="8dp">
+
+                <EditText
+                    android:id="@+id/editUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Paste Instagram share URL here!"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="150" />
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:id="@+id/llnButtons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/input_layout_url"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/btnOpenInstagram"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_home">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingTop="6dp"
+                        android:text="Open Instagram"
+                        android:textAppearance="@style/StyleTextViewFontTitle"
+                        android:textColor="@android:color/white"
+                        android:textSize="28sp" />
+                </FrameLayout>
+
+
+                <FrameLayout
+                    android:id="@+id/btnLoadPhoto"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_bg_home">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:paddingTop="9dp"
+                        android:text="Load photo"
+                        android:textAppearance="@style/StyleTextViewFontTitle"
+                        android:textColor="@android:color/white"
+                        android:textSize="28sp" />
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/llnButtons"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:visibility="gone"
+                card_view:cardCornerRadius="2dp"
+                card_view:cardElevation="1dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:id="@+id/rllPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:id="@+id/imgPhoto"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#88000000"
+                            android:minHeight="200dp" />
+
+                        <ImageView
+                            android:id="@+id/imgPlay"
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_centerInParent="true"
+                            android:src="@drawable/ic_play" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/btnOwner"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/rllPhoto"
+                        android:layout_marginTop="3dp">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/imgOwnerProfile"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp" />
+
+                        <TextView
+                            android:id="@+id/txtOwnerName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toLeftOf="@+id/imgDownload"
+                            android:layout_toRightOf="@+id/imgOwnerProfile"
+                            android:gravity="center_vertical"
+                            android:singleLine="true"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/imgDownload"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="5dp"
+                            android:background="@drawable/download_btn_bg"
+                            android:padding="6dp"
+                            android:src="@drawable/ic_file_download_white" />
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@+id/cardView" />
+        </RelativeLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</RelativeLayout>

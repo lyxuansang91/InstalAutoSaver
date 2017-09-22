@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/media_action_delete"
+        android:title="Delete" />
+    <item
+        android:id="@+id/media_action_share"
+        android:title="Share" />
+    <item
+        android:id="@+id/media_action_set_as"
+        android:title="Set as" />
+
+    <item
+        android:id="@+id/media_action_open_with"
+        android:title="Open with" />
+    <item
+        android:id="@+id/media_action_view_on_instagram"
+        android:title="View on Instagram" />
+</menu>

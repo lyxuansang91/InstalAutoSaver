@@ -1,0 +1,80 @@
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/llnButtons"
+    android:layout_gravity="center"
+    android:layout_marginBottom="15dp"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:visibility="visible"
+    card_view:cardCornerRadius="2dp"
+    card_view:cardElevation="3dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rllPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="180dp" />
+
+            <ImageView
+                android:id="@+id/imgPlay"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_play" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/btnOwner"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/rllPhoto"
+            android:layout_marginTop="3dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imgOwnerProfile"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp" />
+
+            <TextView
+                android:id="@+id/txtOwnerName"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:layout_toLeftOf="@+id/imgDownload"
+                android:layout_toRightOf="@+id/imgOwnerProfile"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="12sp" />
+
+            <ImageView
+                android:id="@+id/imgMenu"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="0dp"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="10dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_menu" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

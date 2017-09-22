@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ff125688</color>
+    <color name="colorPrimaryDark">#ff0f4973</color>
+    <color name="colorHome">#57565c</color>
+    <color name="colorAccent">#2b8507</color>
+    <color name="transparent">#0000</color>
+    <color name="tab_color_text_focus">#ffffffff</color>
+    <color name="tab_color_text_gray">#aaffffff</color>
+    <color name="photo_bg_color">#88000000</color>
+
+    <color name="setting_text_color">#aa000000</color>
+    <color name="setting_text_color2">#66000000</color>
+</resources>

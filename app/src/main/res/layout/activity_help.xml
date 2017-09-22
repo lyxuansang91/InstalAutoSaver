@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:gesture-image="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/id_appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:popupTheme="@style/ToolbarPopupTheme"
+            app:theme="@style/AppTheme.Toolbar">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:text="Help     "
+                android:textAppearance="@style/TextAppearance.FontTitle" />
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/id_appbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:background="#c0cad8"
+                android:gravity="center_vertical"
+                android:paddingLeft="10dp"
+                android:paddingTop="6dp"
+                android:text="How to use StarSaver"
+                android:textAppearance="@style/StyleTextViewFontTitle"
+                android:textColor="#2b5b83"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/txtWatchVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:text="@string/help_watch_video"
+                android:textColor="#051d2e"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtStep01"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/circle_view_white"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/txtStep01"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="Auto asking download notification"
+                    android:textColor="#2b5b83"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/txtStep01"
+                android:paddingLeft="40dp"
+                android:text="Firstly, let's open Instagram app and choose 'Copy share URL' from menu button of a photo or a video."
+                android:textAppearance="@style/StyleTextViewFontNone"
+                android:textColor="#aa2b5b83"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/imgGuide01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginTop="5dp"
+                android:minHeight="300dp"
+                android:scaleType="fitStart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="-55dp"
+                android:layout_toRightOf="@+id/txtStep01"
+                android:paddingLeft="40dp"
+                android:text="Then, a prompt notification would appear, just click 'download icon' to immediately download.  "
+                android:textAppearance="@style/StyleTextViewFontNone"
+                android:textColor="#aa2b5b83"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/imgGuide02"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginTop="5dp"
+                android:minHeight="300dp"
+                android:scaleType="fitStart" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtStep02"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="5dp"
+                    android:background="@drawable/circle_view_white"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textColor="#ffffff"
+                    android:textSize="16sp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/txtStep02"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="5dp"
+                    android:text="Manual download"
+                    android:textColor="#2b5b83"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="5dp"
+                android:paddingLeft="40dp"
+                android:text="To turn off automatic download mode, let's go to setting and switch off 'auto download' button. Then you can manually download photos and videos from Instagram Share URLs."
+                android:textAppearance="@style/StyleTextViewFontNone"
+                android:textColor="#aa2b5b83"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/imgGuide03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="38dp"
+                android:layout_marginRight="38dp"
+                android:layout_marginTop="5dp"
+                android:minHeight="300dp"
+                android:scaleType="fitStart" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_gravity="left"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="-40dp"
+                android:paddingLeft="40dp"
+                android:text="At the home screen, paste your Instagram URL to the input text. Then press 'Load photo' button. Waiting for loading data complete and just click download button to save the photo or video."
+                android:textAppearance="@style/StyleTextViewFontNone"
+                android:textColor="#aa2b5b83"
+                android:textSize="12sp"
+                android:textStyle="italic" />
+
+            <ImageView
+                android:id="@+id/imgGuide04"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="5dp"
+                android:minHeight="300dp"
+                android:scaleType="fitStart" />
+
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_banner_unit_id"></com.google.android.gms.ads.AdView>
+</RelativeLayout>

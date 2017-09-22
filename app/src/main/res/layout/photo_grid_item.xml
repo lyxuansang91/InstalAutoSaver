@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="0dp"
+    android:background="#0000"
+    android:gravity="center"
+    android:padding="0.5dp">
+
+    <com.adu.instaautosaver.view.SquareRelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imgPhoto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/photo_bg_color"
+            android:scaleType="fitXY" />
+    </com.adu.instaautosaver.view.SquareRelativeLayout>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/solvedCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/photo_bg_color"
+        android:clickable="false"
+        android:focusable="false"
+        android:theme="@style/WhiteCheck" />
+
+    <ImageView
+        android:id="@+id/imgPlay"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_centerInParent="true"
+        android:src="@drawable/ic_play" />
+</RelativeLayout>

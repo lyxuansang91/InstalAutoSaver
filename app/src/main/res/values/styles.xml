@@ -1,0 +1,63 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="MyCustomTabLayout" parent="Widget.Design.TabLayout">
+        <item name="tabIndicatorColor">#FFffff</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+        <item name="tabSelectedTextColor">#ffffffff</item>
+    </style>
+
+    <style name="MyCustomTabTextAppearance" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#aaffffff</item>
+        <item name="fontPath">font/billabong.ttf</item>
+        <item name="textAllCaps">true</item>
+    </style>
+
+    <style name="AppTheme.Toolbar" parent="ThemeOverlay.AppCompat.ActionBar">
+        <!-- Customize color of navigation drawer icon and back arrow -->
+        <item name="colorControlNormal">#ffffffff</item>
+        <item name="tabTextAppearance">@style/MyCustomTabTextAppearance</item>
+    </style>
+
+    <style name="ToolbarPopupTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#aa000000</item>
+    </style>
+
+    <style name="MediaActionPopupTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">#88000000</item>
+    </style>
+
+    <style name="TextAppearance.FontTitle" parent="android:TextAppearance">
+        <!-- Custom Attr-->
+        <item name="fontPath">font/billabong.ttf</item>
+        <item name="android:textSize">28sp</item>
+
+        <!-- Set title color -->
+        <item name="android:textColor">#ffffffff</item>
+    </style>
+
+    <style name="StyleTextViewFontTitle">
+        <item name="fontPath">font/billabong.ttf</item>
+    </style>
+
+    <style name="StyleTextViewFontNone" parent="android:TextAppearance">
+        <item name="fontPath"></item>
+        <item name="android:textStyle">italic</item>
+    </style>
+
+    <style name="WhiteCheck">
+        <item name="colorAccent">#ffffff</item>
+        <item name="android:textColorSecondary">#000000</item>
+    </style>
+
+    <style name="AppCompatAlertDialogStyle" parent="Theme.AppCompat.Light.Dialog.Alert"></style>
+</resources>
